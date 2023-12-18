@@ -2,7 +2,7 @@
 
 # Currículo
 
-Este repositório contém o código-fonte do meu currículo desenvolvido em LateX.
+Este repositório contém o código-fonte do meu currículo desenvolvido em LaTeX.
 
 ## Visualização
 
