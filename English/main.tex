@@ -1,0 +1,309 @@
+%%%%%%%%%%%%%%%%%
+% This is an sample CV template created using altacv.cls
+% (v1.3, 10 May 2020) written by LianTze Lim (liantze@gmail.com). Now compiles with pdfLaTeX, XeLaTeX and LuaLaTeX.
+% (v1.6.5b, 27 Jun 2023) forked by Nicolás Omar González Passerino (nicolas.passerino@gmail.com)
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% If you need to pass whatever options to xcolor
+\PassOptionsToPackage{dvipsnames}{xcolor}
+
+%% If you are using \orcid or academicons
+%% icons, make sure you have the academicons
+%% option here, and compile with XeLaTeX
+%% or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{altacv}
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+%% Fork (before v1.6.5a): CV dark mode toggle enabler to use a inverted color palette.
+%% Use the "darkmode" option if you want a color palette used to 
+% \documentclass[10pt,a4paper,ragged2e,withhyper,darkmode]{altacv}
+
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+
+%% AltaCV uses the fontawesome5 and academicons fonts
+%% and packages.
+%% See http://texdoc.net/pkg/fontawesome5 and http://texdoc.net/pkg/academicons for full list of symbols. You MUST compile with XeLaTeX or LuaLaTeX if you want to use academicons.
+
+% Change the page layout if you need to
+\geometry{left=1.2cm,right=1.2cm,top=1cm,bottom=1cm,columnsep=0.75cm}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Roboto Slab}
+  \setsansfont{Lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\else
+  % If using pdflatex:
+  \usepackage[rm]{roboto}
+  \usepackage[defaultsans]{lato}
+  % \usepackage{sourcesanspro}
+  \renewcommand{\familydefault}{\sfdefault}
+\fi
+
+% Fork (before v1.6.5a): Change the color codes to test your personal variant on any mode
+\ifdarkmode%
+  \definecolor{PrimaryColor}{HTML}{C69749}
+  \definecolor{SecondaryColor}{HTML}{D49B54}
+  \definecolor{ThirdColor}{HTML}{1877E8}
+  \definecolor{BodyColor}{HTML}{ABABAB}
+  \definecolor{EmphasisColor}{HTML}{ABABAB}
+  \definecolor{BackgroundColor}{HTML}{191919}
+\else%
+  \definecolor{PrimaryColor}{HTML}{001F5A}
+  \definecolor{SecondaryColor}{HTML}{0039AC}
+  \definecolor{ThirdColor}{HTML}{F3890B}
+  \definecolor{BodyColor}{HTML}{666666}
+  \definecolor{EmphasisColor}{HTML}{2E2E2E}
+  \definecolor{BackgroundColor}{HTML}{E2E2E2}
+\fi%
+
+\colorlet{name}{PrimaryColor}
+\colorlet{tagline}{SecondaryColor}
+\colorlet{heading}{PrimaryColor}
+\colorlet{headingrule}{ThirdColor}
+\colorlet{subheading}{SecondaryColor}
+\colorlet{accent}{SecondaryColor}
+\colorlet{emphasis}{EmphasisColor}
+\colorlet{body}{BodyColor}
+\pagecolor{BackgroundColor}
+
+% Change some fonts, if necessary
+\renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+\renewcommand{\personalinfofont}{\small\bfseries}
+\renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+\renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% sample.bib contains your publications
+%% \addbibresource{main.bib}
+
+\begin{document}
+    \name{Henrique Mendonça Castelar Campos}
+    \tagline{Estudante de Ciência da Computação}
+    %% You can add multiple photos on the left or right
+    \photoL{4cm}{1702063880079}
+
+    \personalinfo{
+        \email{henriquemendonacastelar@gmail.com}\smallskip
+        \phone{+55 31 9 9506-6143}
+        \location{Belo Horizonte, Minas Gerais, Brasil}\\
+        \linkedin{henriquemcc}
+        \github{Henriquemcc}
+        % \npm{}
+        \dev{henriquemcc}
+        \homepage{henriquemcc.github.io}
+        %\medium{}
+        %% You MUST add the academicons option to \documentclass, then compile with LuaLaTeX or XeLaTeX, if you want to use \orcid or other academicons commands.
+        \orcid{0000-0002-8726-8936}
+        %% You can add your own arbtrary detail with
+        %% \printinfo{symbol}{detail}[optional hyperlink prefix]
+        % \printinfo{\faPaw}{Hey ho!}[https://example.com/]
+        %% Or you can declare your own field with
+        %% \NewInfoFiled{fieldname}{symbol}[optional hyperlink prefix] and use it:
+        % \NewInfoField{gitlab}{\faGitlab}[https://gitlab.com/]
+        % \gitlab{henriquemcc}
+    }
+    
+    \makecvheader
+    %% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+    % \AtBeginEnvironment{itemize}{\small}
+    
+    %% Set the left/right column width ratio to 6:4.
+    \columnratio{0.25}
+
+    % Start a 2-column paracol. Both the left and right columns will automatically
+    % break across pages if things get too long.
+    \begin{paracol}{2}
+        % ----- Competências -----
+        \cvsection{Competências}
+            \cvtag{HTML5}
+            \cvtag{CSS}
+            \cvtag{JavaScript}
+            \cvtag{Python}
+            \cvtag{Java}
+            \cvtag{Git}
+            \cvtag{GitHub}
+            \cvtag{Kotlin}
+            \cvtag{Go}
+            \cvtag{PowerShell}
+            \cvtag{Docker}
+            \cvtag{Android}
+            \cvtag{Linux}
+            \cvtag{Shell Scripting}
+            \cvtag{\LaTeX}
+            \cvtag{C++}
+            \cvtag{C\#}
+        % ----- Competências -----
+        
+        % ----- LEARNING -----
+        % \cvsection{Learning}
+        %     \cvtag{Uno}
+        %     \cvtag{Dos}
+        %     \cvtag{Tres}
+        %     \cvtag{Cuatro}
+        %     \cvtag{Cinco}
+        %     \cvtag{Seis}
+        %     \cvtag{Siete}
+        %     \cvtag{Ocho}
+        %     \cvtag{Nueve}
+        %     \cvtag{Diez}
+        %     \medskip
+            
+        %     \cvtag{Rojo}
+        %     \cvtag{Amarillo}
+        %     \cvtag{Azul}
+        %     \cvtag{Verde}
+        %     \cvtag{Violeta}
+        %     \cvtag{Naranja}
+        %     \cvtag{Marron}
+        %     \cvtag{Blanco}
+        %     \cvtag{Gris}
+        %     \cvtag{Negro}
+        % ----- LEARNING -----
+        
+        % ----- LANGUAGES -----
+        % \cvsection{Languages}
+        %     \cvlang{Lang 1}{Native}\\
+        %     \divider
+
+        %     \cvlang{Lang 2}{Basic / A2}
+            %% Yeah I didn't spend too much time making all the
+            %% spacing consistent... sorry. Use \smallskip, \medskip,
+            %% \bigskip, \vpsace etc to make ajustments.
+        % ----- LANGUAGES -----
+            
+        % ----- REFERENCES -----
+        % \cvsection{References}
+        %     \cvref{Prof.\ Alpha Beta}{Institute}{a.beta@university.edu}
+        %     \divider
+
+        %     \cvref{Boss\ Gamma Delta}{Business}{g.delta@business.com}
+        % ----- REFERENCES -----
+        
+        % ----- MOST PROUD -----
+        % \cvsection{Most Proud of}
+        
+        % \cvachievement{\faTrophy}{Fantastic Achievement}{and some details about it}\\
+        % \divider
+        % \cvachievement{\faHeartbeat}{Another achievement}{more details about it of course}\\
+        % \divider
+        % \cvachievement{\faHeartbeat}{Another achievement}{more details about it of course}
+        % ----- MOST PROUD -----
+        
+        % \cvsection{A Day of My Life}
+        
+        % Adapted from @Jake's answer from http://tex.stackexchange.com/a/82729/226
+        % \wheelchart{outer radius}{inner radius}{
+        % comma-separated list of value/text width/color/detail}
+        % \wheelchart{1.5cm}{0.5cm}{%
+        %   6/8em/accent!30/{Sleep,\\beautiful sleep},
+        %   3/8em/accent!40/Hopeful novelist by night,
+        %   8/8em/accent!60/Daytime job,
+        %   2/10em/accent/Sports and relaxation,
+        %   5/6em/accent!20/Spending time with family
+        % }
+        
+        % use ONLY \newpage if you want to force a page break for
+        % ONLY the current column
+        \newpage
+        
+        %% Switch to the right column. This will now automatically move to the second
+        %% page if the content is too long.
+        \switchcolumn
+        
+        % ----- ABOUT ME -----
+        \cvsection{Sobre Mim}
+            \begin{quote}
+                Estudo Ciência da Computação na Pontifícia Universidade Católica de Minas Gerais.
+            \end{quote}
+        % ----- ABOUT ME -----
+        
+        % ----- Experiência -----
+        \cvsection{Experiência}
+            \cvevent{Estagiário}{Prefeitura de Belo Horizonte}{09 2022 -- 11 2022}{Belo Horizonte, Minas Gerais, Brasil}
+            \divider
+            \cvevent{Monitor de Ciência da Computação}{Pontifícia Universidade Católica de Minas Gerais}{08 2023 -- 12 2023}{Belo Horizonte, Minas Gerais, Brasil}
+            % \divider
+        % ----- Experiência -----
+        
+        % ----- Formação acadêmica -----
+        \cvsection{Formação acadêmica}
+            \cvevent{Bacharelado, Ciência da Computação}{Pontifícia Universidade Católica de Minas Gerais
+}{02 2018 -- 12 2026}{Belo Horizonte, Minas Gerais, Brasil}
+            % \divider
+        % ----- Formação acadêmica -----
+
+        % ----- Certificados -----
+        \cvsection{Certificados}
+        \cvevent{Cursos da Alura}{
+        \cvreference{\faGlobe}{https://cursos.alura.com.br/user/henriquemcc/fullCertificate/ebc4dcd6245bdf46e4d6ffd89a1e3ec2}
+        }{07-2020 -- 02-2023}{Online}
+        \divider
+
+        \cvevent{Networking Basics - Cisco}{
+        \cvreference{\faGlobe}{https://www.credly.com/badges/c9830260-5298-434e-8955-4eb876480ba6/linked_in_profile}}{09-2022}{Online}
+        \divider
+
+        \cvevent{Fluência em Inglês - Cambridge - B2 First – Score 172}{
+        \cvreference{\faGlobe}{https://drive.google.com/file/d/1XlpfYXp5Veeiyn8zAHABk8SSAO36QncZ/view?usp=sharing}
+        }{09-2022}{Belo Horizonte, Minas Gerais, Brasil}
+        \divider
+
+        \cvevent{Fluência em Inglês - Cambridge - B2 First – Score 166}{
+        \cvreference{\faGlobe}{https://drive.google.com/file/d/1_a7pPVYLn72of6atRhqDsAnVPhztZAF9/view?usp=sharing}
+        }{02-2019}{Belo Horizonte, Minas Gerais, Brasil}
+        % \divider
+        
+        % ----- Certificados -----
+        
+        % ----- Projetos -----
+        \cvsection{Projetos}
+
+            \cvevent{Implementação Paralela de Blockchain}
+            {
+            \cvreference{\faGithub}{https://github.com/Henriquemcc/Projeto_02_-_Implementacao_Paralela_de_Blockchain_-_Computacao_Paralela_-_2023-2}
+            }{10 2023 -- 12 2023}{}
+            Trabalho em grupo desenvolvido na matéria Computação Paralela, no qual um código de Blockchain deveria ser paralelizado utilizando Open MP para Multicore, Open MP para GPU e Nvidia CUDA.\\
+            \divider
+
+            \cvevent{Chat em Java}
+            {
+            \cvreference{\faGithub}{https://github.com/Henriquemcc/Lista_5_-_Unidade_III_-_Chat_em_Java_-_Redes_de_Computadores_I}
+            }{08 2023 -- 09 2023}{}
+            Trabalho em grupo desenvolvido na matéria Redes de Computadores I, no qual uma aplicação cliente e servidor deveria ser desenvolvida em Java, utilizando os protocolos (da camada de transporte) TCP e UDP. Para este trabalho, foi desenvolvido um programa de mensagens (chat) no qual dois ou mais clientes, através de um servidor, conseguem trocar mensagens entre si.\\
+            \divider
+        
+            \cvevent{Jogo 8-Puzzle}
+            {
+            \cvreference{\faGithub}{https://github.com/Henriquemcc/Jogo_-_Inteligencia_Artificial_2023-1}
+            \cvreference{|\faGlobe}{https://henriquemcc.github.io/Jogo_-_Inteligencia_Artificial_2023-1/}}{02 2023 -- 06 2023}{}
+            Trabalho desenvolvido na matéria Inteligência Artificial, no qual métodos de busca em grafos (A Estrela, Busca Gulosa e Busca Uniforme) deveriam ser utilizados para encontrar uma solução para o Jogo 8-Puzzle.\\
+            \divider
+            
+            \cvevent{Portal de Filmes}
+            {
+            \cvreference{\faGithub}{https://github.com/Henriquemcc/Portal_de_Filmes_-_Desenvolvimento_de_Interfaces_Web}
+            \cvreference{|\faGlobe}{https://henriquemcc.github.io/Portal_de_Filmes_-_Desenvolvimento_de_Interfaces_Web/}}{04 2022 -- 06 2022}{}
+            Trabalho prático da matéria Desenvolvimento de Interfaces Web da Pontifícia Universidade Católica de Minas Gerais
+        % ----- Projetos -----
+    \end{paracol}
+\end{document}
