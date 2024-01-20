@@ -6,11 +6,12 @@ class Certificate:
     Represents a certificate.
     """
 
-    def __init__(self, name: str = "", url: str = "", location: str = "", beginning_date: datetime.date = None, end_date: datetime.date = None, date: datetime.date = None) -> None:
+    def __init__(self, name: str = "", url: str = "", github: str = "", location: str = "", beginning_date: datetime.date = None, end_date: datetime.date = None, date: datetime.date = None) -> None:
         """
         Creates a new instance of Certificate.
         :param name: Name of the certificate.
         :param url: URL of the certificate.
+        :param github: GitHub repository url.
         :param location: Where the certificate was obtained.
         :param beginning_date: (Optional) Date when the certificate was obtained (beginning).
         :param end_date: (Optional) Date when the certificate was obtained (end).
@@ -19,6 +20,7 @@ class Certificate:
         self.name = name
         self.url = url
         self.location = location
+        self.github = github
 
         # Attributing the value of beginning date
         if beginning_date is not None:
@@ -45,4 +47,12 @@ class Certificate:
             date = self.beginning_date.strftime("%Y-%m-%d") + " -- " + self.end_date.strftime("%Y-%m-%d")
 
         # Generating final string
-        return f"\\cvevent{{{self.name}}}{{\\cvreference{{\\faGlobe}}{{{self.url}}}}}{{{date}}}{{{self.location}}}\n\\divider"
+        string = f"\cvevent{{{self.name}}}{{"
+        if (self.url is not None) and (len(self.url) > 0):
+            string += f"\\cvreference{{\\faGlobe}}{{{self.url}}}"
+        if (self.github is not None) and (len(self.github) > 0):
+            string += f"\\cvreference{{\\faGithub}}{{{self.github}}}"
+        string += f"}}{{{date}}}{{{self.location}}}"
+        string += "\n\\divider"
+
+        return string
