@@ -21,18 +21,24 @@ class Certificate:
         self.url = url
         self.location = location
         self.github = github
+        self.beginning_date = beginning_date
+        self.end_date = end_date
+        self.date = date
 
         # Attributing the value of beginning date
-        if beginning_date is not None:
-            self.beginning_date = beginning_date
-        else:
-            self.beginning_date = date
+        if self.beginning_date is None:
+            self.beginning_date = self.date
 
         # Attributing the value of end date
-        if end_date is not None:
-            self.end_date = end_date
-        else:
-            self.end_date = date
+        if self.end_date is None:
+            self.end_date = self.date
+
+        # Attributing the value of date
+        if self.date is None:
+            if self.end_date is not None:
+                self.date = self.end_date
+            else:
+                self.date = self.beginning_date
 
     def to_latex(self) -> str:
         """
