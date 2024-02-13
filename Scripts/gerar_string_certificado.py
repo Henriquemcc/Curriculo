@@ -7,6 +7,9 @@ online = "Online"
 
 certificados = []
 
+# AWS Certified Cloud Practitioner
+certificados.append(Certificate(name="AWS Certified Cloud Practitioner", url="https://www.credly.com/badges/7623bc5f-4a7a-49d9-9504-26b399105745/linked_in_profile", date=datetime.date(2024, 1, 31), location=bh))
+
 # Certificate of Completion: AWS Cloud Practitioner Essentials
 certificados.append(Certificate(name="Certificate of Completion: AWS Cloud Practitioner Essentials", url="https://drive.google.com/file/d/12NtAd2mEhy8O61W-jrLhG-oAnrUvBNqx/view?usp=drive_link", date=datetime.date(2024, 1, 5), location=online))
 
