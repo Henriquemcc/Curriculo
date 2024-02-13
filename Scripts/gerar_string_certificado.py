@@ -22,9 +22,6 @@ certificados.append(Certificate(name="Introduction to Cybersecurity - Cisco", ur
 # Cursos da Alura
 certificados.append(Certificate(name="Cursos da Alura", url="https://cursos.alura.com.br/user/henriquemcc/fullCertificate/ebc4dcd6245bdf46e4d6ffd89a1e3ec2", beginning_date=datetime.datetime(2020, 7, 26), end_date=datetime.datetime(2023, 12, 25), location=online))
 
-# B2 First – Score 166
-certificados.append(Certificate(name="B2 First – Score 166 - Cambridge University Press & Assessment English", url="https://drive.google.com/file/d/1_a7pPVYLn72of6atRhqDsAnVPhztZAF9/view?usp=drive_link", location=bh, date=datetime.date(2019, 2, 1), ))
-
 
 # Ordenando
 certificados.sort(key=lambda x: x.date, reverse=True)
