@@ -48,9 +48,9 @@ class Certificate:
 
         # Generating date string
         if self.beginning_date == self.end_date:
-            date = self.beginning_date.strftime("%Y-%m-%d")
+            date = self.beginning_date.strftime("%m %Y")
         else:
-            date = self.beginning_date.strftime("%Y-%m-%d") + " -- " + self.end_date.strftime("%Y-%m-%d")
+            date = self.beginning_date.strftime("%m %Y") + " - " + self.end_date.strftime("%m %Y")
 
         # Generating final string
         string = f"\cvevent{{{self.name}}}{{"
