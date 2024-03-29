@@ -2,7 +2,7 @@ import datetime
 
 from certificate import Certificate
 
-bh = "Belo Horizonte, Minas Gerais, Brasil"
+bh = "Belo Horizonte, Minas Gerais, Brazil"
 online = "Online"
 
 certificados = []
@@ -23,7 +23,7 @@ certificados.append(Certificate(name="Networking Basics - Cisco", url="https://w
 certificados.append(Certificate(name="Introduction to Cybersecurity - Cisco", url="https://www.credly.com/badges/4676e79d-3e11-4856-afc7-38b96e1edc95/linked_in_profile", date=datetime.date(2022, 8, 9), location=online))
 
 # Cursos da Alura
-certificados.append(Certificate(name="Cursos da Alura", url="https://cursos.alura.com.br/user/henriquemcc/fullCertificate/ebc4dcd6245bdf46e4d6ffd89a1e3ec2", beginning_date=datetime.date(2020, 7, 26), end_date=datetime.date(2023, 12, 25), location=online))
+certificados.append(Certificate(name="Alura's Courses", url="https://cursos.alura.com.br/user/henriquemcc/fullCertificate/ebc4dcd6245bdf46e4d6ffd89a1e3ec2", beginning_date=datetime.date(2020, 7, 26), end_date=datetime.date(2023, 12, 25), location=online))
 
 
 # Ordenando
