@@ -7,6 +7,9 @@ online = "Online"
 
 certificados = []
 
+# Endpoint Security
+certificados.append(Certificate(name="Endpoint Security - Cisco", url="https://www.credly.com/badges/dd945a87-ba32-4732-9ea5-88198208599f/linked_in_profile", date=datetime.date(2024, 3, 24), location=online))
+
 # AWS Certified Cloud Practitioner
 certificados.append(Certificate(name="AWS Certified Cloud Practitioner", url="https://www.credly.com/badges/7623bc5f-4a7a-49d9-9504-26b399105745/linked_in_profile", date=datetime.date(2024, 1, 31), location=bh))
 
