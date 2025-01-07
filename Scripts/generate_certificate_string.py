@@ -7,11 +7,20 @@ online = "Online"
 
 certificados = []
 
+# API REST com Kotlin e Spring Boot: Camada Web - Alura
+certificados.append(Certificate(name="REST API with Kotlin and Spring Boot: Web Layer - Alura", url="https://cursos.alura.com.br/certificate/d42563e9-0604-4603-84d4-225f3addfa3b?lang", date=datetime.date(2024, 9, 12), location=online))
+
+# API REST com Kotlin e Spring Boot: Camada de persistência - Alura
+certificados.append(Certificate(name="REST API with Kotlin and Spring Boot: Persistence Layer - Alura", url="https://cursos.alura.com.br/certificate/739b9d7c-301b-4065-ab63-6d60a67424b9?lang", date=datetime.date(2024, 9, 26), location=online))
+
 # Endpoint Security
 certificados.append(Certificate(name="Endpoint Security - Cisco", url="https://www.credly.com/badges/dd945a87-ba32-4732-9ea5-88198208599f/linked_in_profile", date=datetime.date(2024, 3, 24), location=online))
 
 # AWS Certified Cloud Practitioner
 certificados.append(Certificate(name="AWS Certified Cloud Practitioner", url="https://www.credly.com/badges/7623bc5f-4a7a-49d9-9504-26b399105745/linked_in_profile", date=datetime.date(2024, 1, 31), location=bh))
+
+# Cursos da Alura
+certificados.append(Certificate(name="Alura's Courses", url="https://cursos.alura.com.br/user/henriquemcc/fullCertificate/ebc4dcd6245bdf46e4d6ffd89a1e3ec2", beginning_date=datetime.date(2020, 7, 26), end_date=datetime.date(2023, 12, 25), location=online))
 
 # B2 First – Score 172
 certificados.append(Certificate(name="B2 First – Score 172 - Cambridge University Press & Assessment English", url="https://drive.google.com/file/d/1XlpfYXp5Veeiyn8zAHABk8SSAO36QncZ/view?usp=sharing", date=datetime.date(2022, 9, 9), location=bh))
@@ -22,8 +31,11 @@ certificados.append(Certificate(name="Networking Basics - Cisco", url="https://w
 # Introduction to Cybersecurity
 certificados.append(Certificate(name="Introduction to Cybersecurity - Cisco", url="https://www.credly.com/badges/4676e79d-3e11-4856-afc7-38b96e1edc95/linked_in_profile", date=datetime.date(2022, 8, 9), location=online))
 
-# Cursos da Alura
-certificados.append(Certificate(name="Alura's Courses", url="https://cursos.alura.com.br/user/henriquemcc/fullCertificate/ebc4dcd6245bdf46e4d6ffd89a1e3ec2", beginning_date=datetime.date(2020, 7, 26), end_date=datetime.date(2023, 12, 25), location=online))
+# Formação Linguagem Kotlin - Alura
+certificados.append(Certificate(name="Kotlin Language Course - Alura", url="https://cursos.alura.com.br/degree/certificate/18f608ec-a511-43b4-8586-04c87b079a4c?lang", date=datetime.date(2021, 7, 7), location=online))
+
+# Formação Python - Alura
+certificados.append(Certificate(name="Python Course - Alura", url="https://cursos.alura.com.br/degree/certificate/b96bda48-dc02-4105-9ca5-ae64c2e135e3?lang", date=datetime.date(2020, 8, 14), location=online))
 
 
 # Ordenando
