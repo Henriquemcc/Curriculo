@@ -53,7 +53,7 @@ class Certificate:
             date = self.beginning_date.strftime("%m %Y") + " - " + self.end_date.strftime("%m %Y")
 
         # Generating final string
-        string = f"\cvevent{{{self.name}}}{{"
+        string = f"\\cvevent{{{self.name}}}{{"
         if (self.url is not None) and (len(self.url) > 0):
             string += f"\\cvreference{{\\faGlobe}}{{{self.url}}}"
         if (self.github is not None) and (len(self.github) > 0):
