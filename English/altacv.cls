@@ -20,6 +20,7 @@
 % - https://github.com/logological Remove redundant hyperref and typos (Apr 2021)
 
 %%%%%%%%%%%%%%%%
+\usepackage{graphicx}
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
 \ProvidesClass{altacv}[2023/06/27 AltaCV v1.6.5b, yet another alternative class for a resume/curriculum vitae, now forked.]
 
@@ -195,6 +196,8 @@
 \NewInfoField{github}{\faGithub}[https://github.com/]
 \NewInfoField{gitlab}{\faGitlab}[https://gitlab.com/]
 \NewInfoField{dockerhub}{\faDocker}[https://hub.docker.com/u/]
+\newcommand{\faCredly}{\includegraphics[height=1em]{../icones/credly.png}}
+\NewInfoField{credly}{\faCredly}[https://www.credly.com/users/]
 % v1.?? Use fontawesome5 for Orcid symbol
 \NewInfoField{orcid}{\faOrcid}[https://orcid.org/]
 \NewInfoField{location}{\faMapMarker}
